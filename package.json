@@ -1,7 +1,7 @@
 {
   "name": "html-webpack-plugin-smadey",
-  "version": "2.23.0",
-  "description": "Simplifies creation of HTML files to serve your webpack bundles",
+  "version": "2.23.1",
+  "description": "修改html-webpack-plugin，增加publicPath参数",
   "main": "index.js",
   "files": [
     "index.js",
