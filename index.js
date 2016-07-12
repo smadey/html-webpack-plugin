@@ -14,6 +14,7 @@ function HtmlWebpackPlugin (options) {
   this.options = _.extend({
     template: path.join(__dirname, 'default_index.ejs'),
     filename: 'index.html',
+    publicPath: null,
     hash: false,
     inject: true,
     compile: true,
@@ -44,7 +45,7 @@ HtmlWebpackPlugin.prototype.apply = function (compiler) {
 
   compiler.plugin('make', function (compilation, callback) {
     // Compile the template (queued)
-    compilationPromise = childCompiler.compileTemplate(self.options.template, compiler.context, self.options.filename, compilation)
+    compilationPromise = childCompiler.compileTemplate(self.options.template, compiler.context, self.options.filename, self.options.publicPath, compilation)
       .catch(function (err) {
         compilation.errors.push(prettyError(err, compiler.context).toString());
         return {

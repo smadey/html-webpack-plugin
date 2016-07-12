@@ -1,6 +1,6 @@
 {
-  "name": "html-webpack-plugin",
-  "version": "2.22.0",
+  "name": "html-webpack-plugin-smadey",
+  "version": "2.23.0",
   "description": "Simplifies creation of HTML files to serve your webpack bundles",
   "main": "index.js",
   "files": [
